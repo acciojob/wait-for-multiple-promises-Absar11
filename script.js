@@ -33,7 +33,8 @@ Promise.all([promise1, promise2, promise3])
 		output.innerHTML = ''; 
 		results.forEach(p => {
 			let row = document.createElement('tr');
-			row.innerHTML = `<td>${p.name}</td><td>${p.time}</td>`;
+			row.innerHTML = `<td>${p.name}</td>
+			<td>${p.time}</td>`;
 			output.appendChild(row);
 		});
 		let timeTaken = ((Date.now() - timeStart) / 1000);
